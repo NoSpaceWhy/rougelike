@@ -1,3 +1,4 @@
+
 import pygame
 
 class Player:
@@ -32,6 +33,9 @@ class Player:
             print(self.speed)
         else:
             self.speed = 5
+
+    def player_camera(self, screen, keys):
+        pass
 
     def player_run(self, screen, keys):
         # draw the player
