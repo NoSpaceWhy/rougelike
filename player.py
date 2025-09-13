@@ -41,9 +41,14 @@ class Player:
         else:
             self.speed = 5
 
+    def get_player(self):
+        return self.x, self.y
+
     def player_run(self, screen, keys):
         # draw the player
         self.draw(screen)
+
+        self.get_player()
 
         # movements and actions
         self.action(keys)
