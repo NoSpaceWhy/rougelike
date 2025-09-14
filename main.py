@@ -51,6 +51,7 @@ while True:
                     screen.blit(tile, (x * tile_width, y * tile_height))
 
     e.run(screen)
+    e.move()
 
     p.player_run(screen, keys)
 

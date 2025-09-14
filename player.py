@@ -1,14 +1,18 @@
-
 import pygame
 
 class Player:
     def __init__(self, x:int = 400, y : int = 500):
         self.x = x
         self.y = y
-        self.color = (255, 0, 0)  # Red color
-        self.size = 100  # Size of the player square
-        self.speed = 5  # Movement speed
+        self.color : tuple = (255, 0, 0)  # Red color
+        self.size : int = 100  # Size of the player square
         self.player_rect = pygame.Rect(self.x, self.y, self.size, self.size)
+        
+        self.speed : float = 5  # Movement speed
+        self.health : int = 25 # health of the player
+
+    def health():
+        pass
 
     def draw(self, screen):
         self.player_rect.topleft = self.x, self.y
