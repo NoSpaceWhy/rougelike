@@ -1,8 +1,8 @@
 import pygame
+import pytmx
 
 import player
-
-import pytmx
+import enemy
 
 pygame.init()
 
@@ -29,6 +29,7 @@ map_height = map_height * tile_height
 
 # player
 p = player.Player(400, 300)
+e = enemy.Enemy()
 
 while True:
     for event in pygame.event.get():
@@ -48,6 +49,8 @@ while True:
                 tile = tmx_data.get_tile_image_by_gid(gid)
                 if tile:
                     screen.blit(tile, (x * tile_width, y * tile_height))
+
+    e.run(screen)
 
     p.player_run(screen, keys)
 

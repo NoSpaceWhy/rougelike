@@ -2,7 +2,7 @@
 import pygame
 
 class Player:
-    def __init__(self, x, y):
+    def __init__(self, x:int = 400, y : int = 500):
         self.x = x
         self.y = y
         self.color = (255, 0, 0)  # Red color
